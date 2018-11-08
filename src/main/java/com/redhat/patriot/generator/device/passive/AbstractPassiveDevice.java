@@ -31,18 +31,11 @@ public class AbstractPassiveDevice extends AbstractDevice implements PassiveDevi
 
     @Override
     protected AbstractDevice getThis() {
-        return null;
+        return this;
     }
 
     public double requestData() {
-//        dataWrapper.wrapData(this, );
-        dataWrapper.send();
-        return 0;
-    }
-
-    private double generateValue(double time) {
-//        dataFeed.
-        return 0;
+        return dataFeed.getNextValue();
     }
 
 }
